@@ -16,16 +16,13 @@ from tg_bot import dispatcher, updater, TOKEN, WEBHOOK, OWNER_ID, DONATION_LINK,
 from tg_bot.modules import ALL_MODULES
 from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup,ParseMode
+import os
 
-PM_START_TEXT = """
-Hi 😊 {}, if you have any questions about how to use me please give me /help
-I am a group manager bot Who can help you to manage your Group
+source="https://t.me/DevangJain"
+START_TEXT="Hi [{}](tg://user?id={})\nI am A Forward Tag remover Bot which is created by @DevangJain.Send /help To Know What I Can Do"
+HELP_TEXT="Forward Me A File,Video,Audio,Photo or Anything And \nI will Send You the File Back\n\n`How to Set Caption?`\nReply Caption to a File,Photo,Audio,Media"
 
-Developer - @DevangJain
-For more commands click /help...
-
-Don't DM My Developer For Getting Blocked 🚫 </b>]
-Tg id = []
 #Inline Keyboard Button
 keyboard = [
 [
@@ -34,26 +31,17 @@ keyboard = [
 [
  InlineKeyboardButton("Support",url=https://t.me/DevangJain"")
 ]
-"""
+]
+reply_markup = InlineKeyboardMarkup(keyboard)
 
-HELP_STRINGS = """
+#Start Message
+def start_text(u,c):
+ u.message.reply_text(START_TEXT.format(u.message.from_user.full_name,u.message.chat.id),reply_markup=reply_markup,
+parse_mode=ParseMode.MARKDOWN)
 
-Hello! I am Allrounder Manager 🔵 .
-
-*Main* available commands:
- - /start: Start the bot...
- - /help: help....
- - /donate: To find out more about donating!
- - /settings:
-   - in PM: To find out what SETTINGS you have set....
-   - in a group:
-
-{}
-And the following:
-""".format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll of the following commands  / or ! can  be used...\n")
-
-DONATE_STRING = """To Donate, Contact My Developer (@DevangJain)"""
-
+#Help Message
+def help_text(u,c):
+  u.message.reply_text(HELP_TEXT,reply_markup=reply_markup,parse_mode=ParseMode.MARKDOWN)
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}

@@ -24,14 +24,9 @@ I am a group manager bot Who can help you to manage your Group
 Developer - @DevangJain
 For more commands click /help...
 
-[<b> Don't DM My Developer For Getting Blocked 🚫 </b>]
-def get_user_bio(user_id):
-[    userbio = SESSION.query(UserBio).get(user_id)
-    SESSION.close()
-    if userbio:
-        return userbio.bio
-    return None
-]"""
+Don't DM My Developer For Getting Blocked 🚫 </b>]
+Tg id = {id}
+"""
 
 HELP_STRINGS = """
 

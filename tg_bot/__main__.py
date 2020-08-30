@@ -24,13 +24,13 @@ I am a group manager bot Who can help you to manage your Group
 Developer - @DevangJain
 For more commands click /help...
 
-**Keep in mind that any changes you DO do to the source have to be on github, as per the license.**
+<b> Don't DM My Developer For Getting Blocked 🚫 </b>
 
 """
 
 HELP_STRINGS = """
 
-Hello! my name *{}*.
+Hello! I am Allrounder Manager 🔵 .
 
 *Main* available commands:
  - /start: Start the bot...
@@ -44,11 +44,7 @@ Hello! my name *{}*.
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll of the following commands  / or ! can  be used...\n")
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
-It took lots of work for [my creator](t.me/SonOfLars) to get me to where I am now, and every donation helps \
-motivate him to make me even better. All the donation money will go to a better VPS to host me, and/or beer \
-(see his bio!). He's just a poor student, so every little helps!
-There are two ways of paying him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
+DONATE_STRING = """To Donate, Contact My Developer (@DevangJain)"""
 
 IMPORTED = {}
 MIGRATEABLE = []

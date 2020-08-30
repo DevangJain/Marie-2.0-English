@@ -26,6 +26,14 @@ For more commands click /help...
 
 Don't DM My Developer For Getting Blocked 🚫 </b>]
 Tg id = []
+#Inline Keyboard Button
+keyboard = [
+[
+ InlineKeyboardButton("My Developer 💻", url=source)
+],
+[
+ InlineKeyboardButton("Support",url=https://t.me/DevangJain"")
+]
 """
 
 HELP_STRINGS = """

@@ -25,7 +25,7 @@ Developer - @DevangJain
 For more commands click /help...
 
 Don't DM My Developer For Getting Blocked 🚫 </b>]
-Tg id = {id}
+Tg id = []
 """
 
 HELP_STRINGS = """
